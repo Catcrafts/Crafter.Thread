@@ -1,0 +1,33 @@
+{
+    "name": "crafter-thread",
+    "configurations": [
+        {
+            "name": "base",
+            "standard": "c++26",
+            "source_files": ["Crafter.Thread-ThreadPool"],
+            "module_files": ["Crafter.Thread", "Crafter.Thread-ThreadPool"],
+            "additional_files": [],
+            "build_dir": "./build",
+            "output_dir": "./bin"
+        },
+        {
+            "name": "test",
+            "source_files": ["main"],
+            "extends": ["base"],
+            "optimization_level": "0",
+            "type":"executable"
+        },
+        {
+            "name": "debug",
+            "extends": ["base"],
+            "optimization_level": "0",
+            "type":"library"
+        },
+        {
+            "name": "release",
+            "extends": ["base"],
+            "optimization_level": "3",
+            "type":"library"
+        }
+    ]
+}
